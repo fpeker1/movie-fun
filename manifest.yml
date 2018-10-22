@@ -1,0 +1,11 @@
+applications:
+- name: moviefun
+  path: ./target/moviefun.war
+  buildpacks:
+  - java_buildpack_offline
+  routes:
+  - route: moviefun-tired-otter.apps.pikes.pal.pivotal.io
+  services:
+  - movies-mysql
+  - paper-trail
+  - photo-storage
